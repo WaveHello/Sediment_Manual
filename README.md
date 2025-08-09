@@ -35,7 +35,7 @@ If you find an equation that is incorrect, please help us fix it by following th
 Your contributions will help make this a valuable resource for the entire hydraulic engineering community.
 
 ## Roadmap
-* [] **Phase 1:** Initial AI-driven generation of all equations. (*In Progress*)
+* [ ] **Phase 1:** Initial AI-driven generation of all equations. (*In Progress*)
 * [ ] **Phase 2:** Community-driven verification and correction of all equations. (*In Progress*)
 * [ ] **Phase 3:** Development of unit tests for verified equations to ensure long-term stability.
 * [ ] **Phase 4:** Refactoring the code into a more structured Python package.
