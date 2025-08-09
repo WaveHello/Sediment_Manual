@@ -153,7 +153,69 @@ sandwave/
 - Pytest (testing)
 - Sphinx (documentation)
 
+## Chapter 3 Implementation Plan - Transport of Gravel and Sediment Mixtures
+
+### Chapter Structure Analysis (18 chunks, 88 pages)
+Based on analysis of first 3 chunks (pages 1-15):
+
+**Foundation Sections:**
+- Section 3.1: Fluvial Phenomena (surface armoring, sorting patterns)
+- Section 3.2: Engineering Relevance (dam effects, mining impacts)
+- Section 3.3: Grain-Size Distributions (18+ equations for statistical analysis)
+- Section 3.4: Dimensionless Bank-Full Relations (hydraulic characterization)
+
+### Proposed Module Structure
+```
+src/sandwave/chapter03_gravel_mixtures/
+├── __init__.py
+├── grain_size_distributions.py      # Equations 3-1 to 3-12+ 
+├── hydraulic_relations.py           # Equations 3-13 to 3-18+
+├── sorting_phenomena.py             # Field patterns, armoring processes
+├── transport_mechanics.py           # Core transport equations (from later chunks)
+├── engineering_applications.py      # Dam effects, mining impacts
+└── sampling_methods.py              # Sediment sampling techniques
+```
+
+### Implementation Strategy
+
+**Phase 1: Foundation (Chunks 1-6) - ✅ COMPLETE**
+1. ✅ `grain_size_distributions.py` - 12 functions, Equations 3-1 to 3-12, 3-29
+2. ✅ `hydraulic_relations.py` - 8 functions, Equations 3-13 to 3-22  
+3. ✅ `active_layer_mechanics.py` - 10 functions, Equations 3-23 to 3-44
+4. ✅ `hiding_functions.py` - 10 functions, Equations 3-60 to 3-74
+5. ✅ `flow_hydraulics.py` - 10 functions, Equations 3-75 to 3-76
+
+**Phase 2: Core Transport (Chunks 7-12) - ✅ COMPLETE**
+6. ✅ Extract transport equations from chunks 7-12 (30+ equations)
+7. ✅ `transport_mechanics.py` - 16 functions with major bed-load transport models
+
+**Phase 3: Applications (Chunks 13-18) - NEXT**  
+8. `engineering_applications.py` - Practical engineering tools
+9. `sampling_methods.py` - Field measurement techniques
+
+### ✅ COMPLETED: Chapter 3 Core Implementation (Chunks 1-12)
+- **66 Python functions implemented** across 6 core modules  
+- **~105 equations covered** from grain size statistics to bed-load transport
+- **Complete module structure** with proper imports and documentation
+- **Input validation and error handling** throughout all functions
+
+**Phase 1 Features (Chunks 1-6):**
+- Grain size distributions: ψ scale, lognormal stats, discretization
+- Hydraulic relations: bankfull flow, dimensionless parameters, stream classification
+- Active layer mechanics: conservation equations, entrainment-deposition, transport rates
+- Hiding functions: Egiazaroff, power law, threshold conditions
+- Flow hydraulics: shear stress, friction coefficients, 1D flow equations
+
+**Phase 2 Features (Chunks 7-12):**
+- Major transport models: Ashida-Michiue, Parker, Wilcock-Crowe, Wu-Wang-Jia
+- Hiding functions: Modified Egiazaroff, power law, substrate-based
+- Morphologic complexity corrections and transport enhancement
+- Equal mobility conditions and static armor predictions
+- Generic transport relations with customizable parameters
+
 ## Next Steps
-1. Set up pixi environment
-2. Begin PDF content analysis
-3. Start with particle settling equations as proof of concept
+1. ✅ Set up pixi environment (COMPLETE)
+2. ✅ Begin PDF content analysis (Chapter 3 structure analyzed)
+3. ✅ Chapter 3 Phase 1 implementation (COMPLETE - 50 functions, ~75 equations)
+4. ✅ Chapter 3 Phase 2 implementation (COMPLETE - 16 transport functions, ~30 equations)
+5. **Continue with chunks 13-18 for engineering applications (Phase 3)**

@@ -47,6 +47,7 @@ pixi.lock
 .ipynb_checkpoints/
 
 # PDFs
-*.pdf# pixi environments
+*.pdf
+
 .pixi/*
-!.pixi/config.toml
+!.pixi/config.tom
