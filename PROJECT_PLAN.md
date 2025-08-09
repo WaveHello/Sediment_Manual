@@ -94,11 +94,21 @@ sandwave/
 - **Utility framework** with constants, validators, unit conversions
 - **Full equation traceability** with ASCE Manual 110 references
 
-### ✅ LATEST UPDATE
-- **pyproject.toml added** - Complete Python packaging configuration with hatchling, dev tools, and optional dependencies
+### ✅ COMPLETED: Chapter 4 - Fine-Grained Sediment Transport
+- **8 complete modules** with comprehensive implementation (3,804 lines of code)
+- **7 core modules** with ~30 equations implemented:
+  - `settling_velocity.py` - Four-zone settling, flocculation effects (Equations 4-14 to 4-23)
+  - `floc_aggregation.py` - Fractal floc models, collision mechanics (Equations 4-9 to 4-13)
+  - `rheological_models.py` - Viscosity models, viscoelastic properties (Equations 4-1 to 4-8)
+  - `sediment_characterization.py` - Clay minerals, cohesion classification (Tables 4-1 to 4-3)
+  - `deposition_transport.py` - Deposition and transport processes (Equations 4-24 to 4-27)
+  - `consolidation_gelling.py` - Consolidation mechanics and gelling (Equations 4-28 to 4-29)
+  - `environmental_effects.py` - Temperature, salinity, organic content effects
+- **Complete cohesive sediment framework** with flocculation, rheology, and environmental factors
+- **Full equation traceability** with ASCE Manual 110 references
 
 ### 📋 REMAINING WORK  
-- **20 more chapters** to implement (~400+ equations estimated)
+- **19 more chapters** to implement (~370+ equations estimated)
 - **Chapter 3 verification** against PDF source to ensure completeness
 - Testing framework and comprehensive test suite
 - Documentation generation and examples
@@ -223,10 +233,60 @@ src/sandwave/chapter03_gravel_mixtures/
 - Overbank deposition calculations for floodplain management
 - Tracer-based transport methods and stratification corrections
 
+## Chapter 5 Implementation Plan - Sediment Transport Measurements
+
+### Chapter Structure Analysis (10 chunks, 48 pages)
+Based on analysis of first 5 chunks (pages 1-25):
+
+**Foundation Sections:**
+- Section 5.1: General overview and historical context  
+- Section 5.2: Bed-Material Measurement Techniques (sampling methods, bias corrections)
+- Section 5.3: Suspended-Sediment Samplers (equipment, collection procedures)
+
+**Key Characteristics:**
+- **Measurement-focused** rather than equation-heavy (unlike Chapters 2-4)
+- Emphasizes **field protocols, sampling methods, and statistical analysis**
+- Contains **6 primary equations** for statistical sampling and bias corrections
+- Serves as **practical field manual** for sediment measurement practitioners
+
+### Proposed Module Structure
+```
+src/sandwave/chapter05_measurements/
+├── __init__.py
+├── statistical_methods.py          # Equations 5-1 to 5-6, confidence intervals
+├── sampling_equipment.py           # Sampler specifications, calibration
+├── bed_material_sampling.py        # Grid methods, volumetric sampling, bias corrections  
+├── suspended_sediment_sampling.py  # Isokinetic samplers, collection procedures
+├── sample_analysis.py              # Sieve analysis, concentration calculations
+├── field_procedures.py             # Protocols, QA/QC methods, data validation
+└── measurement_conversions.py      # Units, concentration conversions
+```
+
+### Implementation Strategy
+
+**Phase 1: Core Statistical Methods**
+1. `statistical_methods.py` - Sample size calculations, bias corrections (Equations 5-1, 5-2)
+2. `measurement_conversions.py` - Unit conversions, standardization functions
+
+**Phase 2: Sampling Methods**
+3. `bed_material_sampling.py` - Grid sampling, volumetric methods, Wolman walk
+4. `suspended_sediment_sampling.py` - Isokinetic samplers, collection protocols
+5. `sampling_equipment.py` - Equipment models, calibration functions
+
+**Phase 3: Analysis and Procedures**  
+6. `sample_analysis.py` - Sieve analysis, particle size distributions
+7. `field_procedures.py` - Field protocols, quality control systems
+
+### Estimated Implementation Scope
+- **50-70 functions** across 7 modules (moderate complexity)
+- **Primary focus**: Statistical methods, equipment modeling, protocol logic
+- **Key challenges**: Complex statistical distributions, equipment specifications
+- **Complement to transport chapters**: Provides measurement infrastructure for Chapters 2-4
+
 ## Next Steps
 1. ✅ Set up pixi environment (COMPLETE)
-2. ✅ Begin PDF content analysis (Chapter 3 structure analyzed)
-3. ✅ Chapter 3 Phase 1 implementation (COMPLETE - 50 functions, ~75 equations)
-4. ✅ Chapter 3 Phase 2 implementation (COMPLETE - 16 transport functions, ~30 equations)
-5. ✅ Chapter 3 Phase 3 implementation (COMPLETE - engineering applications with advanced models)
-6. **Verify Chapter 3 completeness against PDF source and begin Chapter 4 (Fine-Grained Sediment Transport)**
+2. ✅ Chapter 2 implementation (COMPLETE - Transport & Morphodynamics)
+3. ✅ Chapter 3 implementation (COMPLETE - Gravel & Sediment Mixtures)  
+4. ✅ Chapter 4 implementation (COMPLETE - Fine-Grained Sediment Transport)
+5. ✅ Chapter 5 structure analysis and planning (COMPLETE)
+6. **Begin Chapter 5 implementation (Sediment Transport Measurements)**
