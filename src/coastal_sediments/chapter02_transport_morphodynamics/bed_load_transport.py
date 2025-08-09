@@ -18,7 +18,7 @@ def meyer_peter_muller(
     """
     Calculate dimensionless bed load transport rate using Meyer-Peter Müller equation.
     
-    q*b = 8(θ - θcr)^1.5
+    Equation 2.35: q*b = 8(θ - θcr)^1.5
     
     Where:
     - q*b is dimensionless bed load transport rate
@@ -63,7 +63,7 @@ def einstein_brown(
     """
     Calculate dimensionless bed load transport rate using Einstein-Brown equation.
     
-    q*b = 40 * θ^3 / (1 + (θcr/θ)^3)
+    Equation 2.36: q*b = 40 * θ^3 / (1 + (θcr/θ)^3)
     
     Parameters
     ----------
@@ -100,7 +100,7 @@ def bed_load_discharge_volumetric(
     """
     Calculate volumetric bed load discharge per unit width.
     
-    qb = q*b * sqrt[(ρs/ρf - 1)gD³]
+    Equation 2.34: qb = q*b * sqrt[(ρs/ρf - 1)gD³]
     
     Where:
     - qb is volumetric bed load discharge per unit width [m²/s]
@@ -150,7 +150,7 @@ def engelund_hansen(
     """
     Calculate total sediment transport using Engelund-Hansen equation.
     
-    qt* = 0.05 * θ^2.5 / f
+    Equation 2.37: qt* = 0.05 * θ^2.5 / f
     
     Where:
     - qt* is dimensionless total transport rate [-]

@@ -16,7 +16,7 @@ def dune_height_relation(
     """
     Calculate dune height using empirical relation.
     
-    Hd = C * H
+    Equation 2.40: Hd = C * H
     
     Where:
     - Hd is dune height [m]
@@ -53,7 +53,7 @@ def dune_length_relation(
     """
     Calculate dune length using empirical relations.
     
-    Ld = C * H  or  Ld = α * Hd
+    Equation 2.41: Ld = C * H  or  Ld = α * Hd
     
     Where:
     - Ld is dune length [m]
@@ -144,7 +144,7 @@ def bed_roughness_height(
     """
     Calculate bed roughness height from bed form geometry.
     
-    ks = α * Hf
+    Equation 2.42: ks = α * Hf
     
     Where:
     - ks is roughness height [m]
@@ -192,7 +192,7 @@ def manning_roughness_coefficient(
     """
     Calculate Manning's roughness coefficient from bed roughness.
     
-    n = (ks^(1/6)) / (8.5 * R^(1/6))
+    Equation 2.43: n = (ks^(1/6)) / (8.5 * R^(1/6))
     
     Where:
     - n is Manning's coefficient [s/m^(1/3)]
@@ -228,7 +228,7 @@ def darcy_weisbach_friction_factor(
     """
     Calculate Darcy-Weisbach friction factor.
     
-    f = 8g / [5.75 * log10(12.2 * R/ks)]²
+    Equation 2.44: f = 8g / [5.75 * log10(12.2 * R/ks)]²
     
     Where:
     - f is Darcy-Weisbach friction factor [-]
@@ -273,7 +273,7 @@ def bed_form_migration_rate(
     """
     Estimate bed form migration rate.
     
-    Vf = qb / [(1-n) * Hf]
+    Equation 2.45: Vf = qb / [(1-n) * Hf]
     
     Where:
     - Vf is bed form migration velocity [m/s]

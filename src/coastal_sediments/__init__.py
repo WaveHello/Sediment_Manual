@@ -1,5 +1,5 @@
 """
-Coastal Sediments: A Python library for sediment transport calculations.
+SandWave: A Python library for sediment transport calculations.
 
 This library provides implementations of equations from the ASCE Manual 110:
 "Sedimentation Engineering: Processes, Measurements, Modeling, and Practice"

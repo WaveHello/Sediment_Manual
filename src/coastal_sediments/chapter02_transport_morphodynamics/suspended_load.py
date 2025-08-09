@@ -18,7 +18,7 @@ def rouse_parameter(
     """
     Calculate Rouse parameter for suspended sediment.
     
-    P = ws/(κu*)
+    Equation 2.62: P = ws/(κu*)
     
     Where:
     - ws is settling velocity [m/s]
@@ -60,7 +60,7 @@ def concentration_profile(
     """
     Calculate suspended sediment concentration using Rouse profile.
     
-    C(z)/Ca = [(H-z)/z * a/(H-a)]^P
+    Equation 2.61: C(z)/Ca = [(H-z)/z * a/(H-a)]^P
     
     Where:
     - C(z) is concentration at height z [kg/m³]
@@ -117,7 +117,7 @@ def suspended_load_discharge(
     """
     Calculate suspended load discharge by integrating velocity and concentration profiles.
     
-    qs = ∫[a to H] u(z)C(z) dz
+    Equation 2.60: qs = ∫[a to H] u(z)C(z) dz
     
     Where:
     - qs is suspended load discharge per unit width [kg/(m·s)]
@@ -178,7 +178,7 @@ def logarithmic_velocity_profile(
     """
     Calculate velocity using logarithmic profile.
     
-    u(z) = (u*/κ) * ln(z/z0)
+    Equation 2.5: u(z) = (u*/κ) * ln(z/z0)
     
     Where:
     - u* is shear velocity [m/s]

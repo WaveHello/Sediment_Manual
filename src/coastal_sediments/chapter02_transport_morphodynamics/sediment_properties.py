@@ -21,7 +21,7 @@ def settling_velocity_stokes(
     
     Valid for particles with Re_p < 0.5 (typically D < 0.1 mm)
     
-    ws = (ρs - ρf)gD²/(18μ)
+    Equation 2.17: ws = (ρs - ρf)gD²/(18μ)
     
     Where:
     - ρs is sediment density [kg/m³]
@@ -136,7 +136,7 @@ def particle_reynolds_number(
     """
     Calculate particle Reynolds number.
     
-    Re_p = wsD/ν
+    Equation 2.18: Re_p = wsD/ν
     
     Where:
     - ws is settling velocity [m/s]
@@ -178,7 +178,7 @@ def dimensionless_diameter(
     """
     Calculate dimensionless particle diameter.
     
-    D* = D[(ρs/ρf - 1)g/ν²]^(1/3)
+    Equation 2.19: D* = D[(ρs/ρf - 1)g/ν²]^(1/3)
     
     Where:
     - D is particle diameter [m]

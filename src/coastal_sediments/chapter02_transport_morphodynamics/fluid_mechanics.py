@@ -17,7 +17,7 @@ def reynolds_number(
     """
     Calculate Reynolds number.
     
-    Re = VL/ν
+    Equation 2.1: Re = VL/ν
     
     Where:
     - V is characteristic velocity [m/s]
@@ -57,7 +57,7 @@ def froude_number(
     """
     Calculate Froude number.
     
-    Fr = V/√(gH)
+    Equation 2.2: Fr = V/√(gH)
     
     Where:
     - V is flow velocity [m/s]
@@ -96,7 +96,7 @@ def shear_velocity(
     """
     Calculate shear velocity from boundary shear stress.
     
-    u* = √(τ₀/ρ)
+    Equation 2.8: u* = √(τ₀/ρ)
     
     Where:
     - τ₀ is boundary shear stress [N/m²]
@@ -133,7 +133,7 @@ def boundary_shear_stress(
     """
     Calculate boundary shear stress.
     
-    τ₀ = ρgRS
+    Equation 2.7: τ₀ = ρgRS
     
     Where:
     - ρ is fluid density [kg/m³]
