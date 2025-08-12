@@ -322,4 +322,5 @@ src/sandwave/chapter05_measurements/
 5. ✅ Chapter 5 implementation (COMPLETE - Sediment Transport Measurements)
 6. 📝 Chapter 6 (Fluvial Geomorphology) - Deferred for later implementation
 7. 📝 Chapter 7 (Streambank Erosion) - Deferred for later implementation
-8. **Begin Chapter 8 implementation (River Meandering)**
+8. ✅ Chapter 8 implementation (COMPLETE - River Meandering and Channel Stability)
+9. **Begin Chapter 9 implementation (Stream Restoration)**
