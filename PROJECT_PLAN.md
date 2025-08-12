@@ -81,7 +81,7 @@ sandwave/
 └── README.md
 ```
 
-## Current Status (Updated 2025-08-09)
+## Current Status (Updated 2025-08-12)
 
 ### ✅ COMPLETED: Chapter 2 - Sediment Transport and Morphodynamics
 - **50 files committed** with comprehensive implementation
@@ -107,8 +107,39 @@ sandwave/
 - **Complete cohesive sediment framework** with flocculation, rheology, and environmental factors
 - **Full equation traceability** with ASCE Manual 110 references
 
+### ✅ COMPLETED: Chapter 5 - Sediment Transport Measurements
+- **7 complete modules** with comprehensive implementation for field measurements
+- **6 primary equations** for statistical sampling and bias corrections:
+  - `statistical_methods.py` - Sample size calculations, confidence intervals (Equations 5-1 to 5-6)
+  - `sampling_equipment.py` - Equipment specifications, calibration functions
+  - `bed_material_sampling.py` - Grid methods, volumetric sampling, bias corrections
+  - `suspended_sediment_sampling.py` - Isokinetic samplers, collection procedures
+  - `sample_analysis.py` - Sieve analysis, concentration calculations
+  - `field_procedures.py` - Field protocols, QA/QC methods, data validation
+  - `measurement_conversions.py` - Unit conversions, standardization functions
+- **Measurement-focused framework** with field protocols and statistical analysis
+- **Full equation traceability** with ASCE Manual 110 references
+
+### ✅ COMPLETED: Chapter 8 - River Meandering and Channel Stability  
+- **7 complete modules** with comprehensive implementation for meandering analysis
+- **48 equations** covering full meandering and stability framework:
+  - `meandering_criteria.py` - Stability thresholds, pattern classification (Equations 8-1 to 8-4)
+  - `planform_geometry.py` - Leopold-Wolman relationships, sinuosity (Equations 8-5 to 8-7)
+  - `bank_erosion.py` - Migration rates, erosion models (Equations 8-8 to 8-12)
+  - `flow_dynamics.py` - Bend flow, bed topography, secondary currents (Equations 8-13 to 8-28)
+  - `stability_analysis.py` - Perturbation theory, dominant wavelength (Equations 8-29 to 8-44)
+  - `channel_migration.py` - Hickin mapping, evolution simulation (Equations 8-45 to 8-48)
+  - `channel_stabilization.py` - Engineering applications, vane design, revetments
+- **Advanced mathematical framework** with differential equations, stability theory, numerical simulation
+- **Complete engineering design tools** for river meandering analysis and channel stabilization
+- **Full equation traceability** with ASCE Manual 110 references
+
+### 📝 DEFERRED CHAPTERS
+- **Chapter 6** (Fluvial Geomorphology) - Deferred for later implementation
+- **Chapter 7** (Streambank Erosion) - Deferred for later implementation
+
 ### 📋 REMAINING WORK  
-- **19 more chapters** to implement (~370+ equations estimated)
+- **16 more chapters** to implement (~290+ equations estimated)
 - **Chapter 3 verification** against PDF source to ensure completeness
 - Testing framework and comprehensive test suite
 - Documentation generation and examples
@@ -288,5 +319,7 @@ src/sandwave/chapter05_measurements/
 2. ✅ Chapter 2 implementation (COMPLETE - Transport & Morphodynamics)
 3. ✅ Chapter 3 implementation (COMPLETE - Gravel & Sediment Mixtures)  
 4. ✅ Chapter 4 implementation (COMPLETE - Fine-Grained Sediment Transport)
-5. ✅ Chapter 5 structure analysis and planning (COMPLETE)
-6. **Begin Chapter 5 implementation (Sediment Transport Measurements)**
+5. ✅ Chapter 5 implementation (COMPLETE - Sediment Transport Measurements)
+6. 📝 Chapter 6 (Fluvial Geomorphology) - Deferred for later implementation
+7. 📝 Chapter 7 (Streambank Erosion) - Deferred for later implementation
+8. **Begin Chapter 8 implementation (River Meandering)**
